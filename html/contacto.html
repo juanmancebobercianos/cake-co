@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cake & Co</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Fondo de la página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1; /* Rosa pálido */
+        }
+
+        /* Banner */
+        header {
+            width: 100%;
+            height: 150px; /* Altura del banner */
+            background-image: url('/img/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #f56aaf6e; /* Rosa fuerte */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra gris oscura */
+            padding: 10px 0;
+            position: relative;
+            top: 150px; /* Para que quede justo debajo del banner */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección Contacto */
+        section#contacto {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section#contacto h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        section#contacto p {
+            font-size: 1.2rem;
+        }
+
+        /* Formulario de contacto */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #f56aaf;
+            box-shadow: 0 0 5px rgba(245, 106, 175, 0.5);
+        }
+
+        form button {
+            background-color: #f56aaf;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #e05599;
+        }
+
+        /* Imagen de iconos */
+        .icon-container {
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .icon-container img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            form input,
+            form textarea,
+            form button {
+                font-size: 0.9rem;
+            }
+
+            .icon-container img {
+                max-width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navegación y Banner -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres hacer un pedido? ¡Contáctanos!</p>
+        <p>Email: contacto@cakeandco.com</p>
+        <p>Teléfono: +123 456 789</p>
+
+        <!-- Formulario de contacto -->
+        <form action="enviar-formulario.php" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Imagen centrada -->
+        <div class="icon-container">
+            <img src="/img/iconos.png" alt="Iconos">
+        </div>
+    </section>
+</body>
+
+</html>
