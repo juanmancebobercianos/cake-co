@@ -41,18 +41,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin: 0 25px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 1.5rem; /* Letras más grandes */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra gris oscura */
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         nav ul li a:hover {
@@ -68,22 +69,41 @@
         section#sobre-nosotros img {
             width: 200px; /* Tamaño inicial del logo */
             height: auto;
-            margin-top: 100px; /* Ajusta este valor para moverlo más abajo */
+            margin-top: 50px; /* Ajusta este valor para moverlo más abajo */
             margin-bottom: 20px;
         }
 
         section#sobre-nosotros p {
-            font-size: 1.3rem; /* Tamaño del texto */
+            font-size: 1.2rem; /* Tamaño del texto */
             font-family: 'Georgia', serif; /* Fuente personalizada */
             line-height: 1.8; /* Espaciado entre líneas */
             color: #333; /* Color del texto */
             text-align: justify; /* Justifica el texto */
-            margin: 50px auto; /* Centra el texto verticalmente */
+            margin: 20px auto; /* Centra el texto verticalmente */
             max-width: 800px; /* Limita el ancho del texto */
             padding: 20px; /* Espaciado interno */
             background-color: #fff; /* Fondo blanco para resaltar */
             border-radius: 10px; /* Bordes redondeados */
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un diseño más limpio */
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            section#sobre-nosotros img {
+                width: 150px; /* Ajuste de tamaño para pantallas pequeñas */
+            }
+
+            section#sobre-nosotros p {
+                font-size: 1rem; /* Ajuste del texto para pantallas pequeñas */
+            }
         }
     </style>
 </head>
@@ -113,6 +133,7 @@
 </body>
 
 </html>
+
 
 
 
